@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --verbose --coverage",
     "start": "nodemon",
-    "lint": "eslint '**/*.js"
+    "lint": "eslint '**/*.js'"
   },
   "repository": {
     "type": "git",

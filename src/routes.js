@@ -18,10 +18,14 @@ authRouter.post('/signup', (req, res,next) => {
     }).catch(next);
 });
 
+authRouter.get('/error', (req, res) => {
+  res.status(500).send('Error');
+});
+
 authRouter.post('/signin', basicAuth, bearerAuth, (req, res) => {
   res.status(200).send(req.token);
 });
-authRouter.post('/error', basicAuth, bearerAuth, (req, res) => {
+authRouter.post('/error', (req, res) => {
   res.status(500).send(req.token);
 });
 

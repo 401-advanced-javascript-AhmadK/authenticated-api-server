@@ -19,10 +19,10 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.static('./public'));
+app.use(apiRouter);
 app.use(authRouter);
 app.use(notFound);
 app.use(errorHandler);
-app.use(apiRouter);
 
 module.exports = {
   server: app,
